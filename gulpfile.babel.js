@@ -20,7 +20,7 @@ const routes = {
         dest: 'dist',
     },
     img: {
-        src: 'src/static/img/*',
+        src: 'src/static/img/**/*',
         dest: 'dist/static/img',
     },
     scss: {
@@ -36,6 +36,10 @@ const routes = {
     libs: {
         src: 'src/static/js/libs/*',
         dest: 'dist/static/js/libs',
+    },
+    markup: {
+        src: 'src/markup/**/*',
+        dest: 'dist/markup',
     },
 };
 
@@ -60,7 +64,10 @@ const webserver = () =>
     gulp.src('dist').pipe(ws({ livereload: true, open: true }));
 
 const img = () =>
-    gulp.src(routes.img.src, {encoding: false}).pipe(image()).pipe(gulp.dest(routes.img.dest));
+    gulp
+        .src(routes.img.src, { encoding: false })
+        .pipe(image())
+        .pipe(gulp.dest(routes.img.dest));
 
 const styles = () =>
     gulp
@@ -90,6 +97,9 @@ const js = () =>
 
 const libs = () => gulp.src(routes.libs.src).pipe(gulp.dest(routes.libs.dest));
 
+const markup = () =>
+    gulp.src(routes.markup.src).pipe(gulp.dest(routes.markup.dest));
+
 const ghdeploy = (cb) => {
     exec('gh-pages -d dist', (err, stdout, stderr) => {
         console.log(stdout);
@@ -104,10 +114,11 @@ const watch = () => {
     gulp.watch(routes.scss.watch, styles);
     gulp.watch(routes.js.watch, js);
     gulp.watch(routes.libs.src, libs);
+    gulp.watch(routes.markup.src, markup);
 };
 
 const prepare = gulp.series(clean, img);
-const assets = gulp.series(html, styles, js, libs);
+const assets = gulp.series(html, styles, js, libs, markup);
 const postDev = gulp.parallel(webserver, watch);
 
 export const build = gulp.series(prepare, assets);

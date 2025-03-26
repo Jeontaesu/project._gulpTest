@@ -1,33 +1,99 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ko">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>project._Test</title>
-  <link rel="stylesheet" href="static/css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
-  <script src="static/js/libs/jquery-3.7.1.min.js"></script>
-  <script src="static/js/libs/jquery-ui.min.js"></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="viewport" content="width=960" />
+  <title>마크업</title>
+  <link rel="stylesheet" href="./markup/markup.css" />
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="./markup/markup.js"></script>
+
+
+  <script>
+    //state-> 완료: end , 진행중: ing
+    const markupPcList = [
+      // {
+      //   공통: [
+      //     {
+      //       depth2: "img",
+      //       info: "아이콘, 로고, 이미지 모음",
+      //       src: "svg",
+      //       state: "",
+      //     },
+      //     {
+      //       depth2: "layout",
+      //       info: "header, footer, nav, 알림창",
+      //       src: "layout",
+      //       state: "",
+      //     },
+      //     {
+      //       depth2: "button",
+      //       info: "style",
+      //       src: "etc?button",
+      //     },
+      //     {
+      //       depth2: "form",
+      //       info: "input, select",
+      //       src: "etc?component",
+      //     },
+      //     {
+      //       depth2: "component",
+      //       info: "block요소 공통",
+      //       src: "etc?component",
+      //     },
+      //     {
+      //       depth2: "popup",
+      //       info: "style",
+      //       src: "popup",
+      //     },
+      //   ],
+      // },
+      {
+        메인: [
+          {
+            depth2: "메인",
+            depth3: "",
+            info: "",
+            src: "main",
+            state: "ing",
+          },
+        ],
+      },
+    ];
+  </script>
 </head>
 
 <body>
-  <header>
-  <h1>
-    <a href="#">logo</a>
-  </h1>
-  <nav>
-    <ul>
-      <li><a href="">1</a></li>
-      <li><a href="">2</a></li>
-      <li><a href="">3</a></li>
-    </ul>
-  </nav>
-</header>
-  <p>131~111111111!~!2</p>
-  <a href="./main/main.html">main Link</a>
+  <div id="wrap">
+    <!-- container -->
+    <div id="container">
+      <div class="markup">
+        <div class="tab-a">
+          <a href="javascript:void(0);" class="on">동아 일호재단</a>
+        </div>
+        <div class="notice">
+          <p class="pub"><strong>*담당자: 전태수</strong></p>
+          <p class="progress">
+            *총 페이지 <strong id="totalCnt"></strong>개 중 <strong id="endCnt"></strong>개 완료 (<strong
+              id="endCntP"></strong>%)
+          </p>
+        </div>
+        <h2>동아 일호재단</h2>
+        <div class="state"><span class="ing">진행중</span><span class="end">완료</span><span class="allEnd">모두완료</span></div>
+        <ul class="urlList">
+          <li class="head">
+            <div class="depth_1">1Depth (<span id="depth1Cnt"></span>)</div>
+            <div class="depth_2">2Depth</div>
+            <div class="depth_3">3Depth</div>
+            <div class="info">detail</div>
+            <div class="fileName">folder/name</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
 </body>

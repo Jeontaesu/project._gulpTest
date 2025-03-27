@@ -185,8 +185,9 @@ html {
 .notice {
   margin-top: 30px;
   padding: 20px;
-  border: 1px solid #7b7b7b;
-  font-size: 17px;
+  border: 1px solid #eee;
+  font-size: 16px;
+  color: #222;
 }
 
 .notice p+p {
@@ -208,23 +209,24 @@ html {
 
 .state>* {
   margin-left: 10px;
-  padding: 2px 5px;
+  padding: 0 5px;
   display: inline-block;
+  font-size: 15px;
 }
 
 .state .allEnd {
-  background-color: #1ea31e;
+  background-color: #00b4d6;
   color: #fff;
   font-weight: 600;
 }
 
 .state .ing {
-  color: red;
+  color: rgb(248, 55, 55);
 }
 
 .state .end {
-  background-color: rgb(253, 225, 134);
-  ;
+  background-color: rgb(255, 220, 103);
+  color: #525252
 }
 
 .urlList {
@@ -255,7 +257,7 @@ html {
 .urlList>li {}
 
 .urlList>li+li {
-  border-top: 1px solid #000;
+  border-top: 1px solid #222;
 }
 
 li.head {
@@ -263,12 +265,12 @@ li.head {
   table-layout: fixed;
   width: 100%;
   text-align: center;
-  background-color: #000;
-  color: #fff;
+  background-color: #f9f9f9;
+  color: #222;
 }
 
 li.head>* {
-  padding: 13px 15px;
+  padding: 8px 15px;
   display: table-cell;
   vertical-align: middle;
   font-weight: 700;
@@ -289,7 +291,7 @@ li.head>* {
 }
 
 .sub>li>* {
-  padding: 13px 15px;
+  padding: 8px 15px;
   display: table-cell;
   vertical-align: middle;
 }
@@ -313,9 +315,10 @@ li.head>* {
 }
 
 h2 {
-  margin-top: 50px;
+  margin-top: 40px;
   padding-bottom: 20px;
   font-size: 25px;
+  color: #222;
 }
 
 h3 {
@@ -333,12 +336,13 @@ h3 {
 .tab-a a {
   padding: 10px 0;
   flex: 1;
-  font-size: 30px;
-  border: 1px solid #aaa;
+  font-size: 24px;
+  border: 1px solid #e2dede;
   color: #aaa;
 }
 
 a.on {
-  background-color: #000;
-  color: #fff;
+  background-color: #f8f8f8;
+  color: #222;
+  font-weight: bold;
 }

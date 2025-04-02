@@ -1,0 +1,7 @@
+(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+"use strict";var _resize=require("./resize.js");(0,_resize.resizeFont)(),window.addEventListener("resize",_resize.debounceResize);
+
+},{"./resize.js":2}],2:[function(require,module,exports){
+"use strict";var resizeTimeout;function resizeFont(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"init",i=window.innerWidth,n=window.innerHeight,t=i/n;if(document.documentElement.style.fontSize=i>=1200&&n>=860?"":t>1200/860?"1.15vh":"0.8vw","init"!==e){6===window.currentSection&&(window.currentSection=5);var o=document.querySelector('.pagination-bullet[data-idx="'.concat(window.currentSection,'"]'));o&&o.click()}}function debounceResize(){clearTimeout(resizeTimeout),resizeTimeout=setTimeout(function(){return resizeFont("resize")},300)}Object.defineProperty(exports,"__esModule",{value:!0}),exports.debounceResize=debounceResize,exports.resizeFont=resizeFont,resizeFont(),window.addEventListener("resize",debounceResize);
+
+},{}]},{},[1]);

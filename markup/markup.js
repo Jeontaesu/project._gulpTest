@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 str += `<div class="info">${item.info || ''}</div>`;
                 const [fileName, query] = item.src.split('?');
                 str += `<div class="fileName"><a href="${
-                    fileName === 'main' ? './main/' : './pages/'
+                    depth1 === 'Guide' ? './template/' : fileName === 'main' ? './main/' : './pages/'
                 }${fileName}.html${query ? `?${query}` : ''}" target="_blank">${fileName}</a></div>`;
                 str += `</li>`;
             });

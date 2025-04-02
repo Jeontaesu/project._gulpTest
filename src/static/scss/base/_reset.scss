@@ -1,95 +1,42 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-// table,
-// caption,
-// tbody,
-// tfoot,
-// thead,
-// tr,
-// th,
-// td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+@use 'abstracts/mixins' as mix;
+@use 'abstracts/variables' as var;
+@use 'abstracts/functions' as func;
+
+* {
     margin: 0;
     padding: 0;
-    border: 0;
     font: inherit;
-    vertical-align: baseline;
-    font-family: 'Noto Sans KR', sans-serif;
+    color: inherit;
+}
+
+*,
+:after,
+:before {
     box-sizing: border-box;
 }
 
-strong {
-    font-weight: 700;
+:root {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    cursor: default;
+    overflow-wrap: break-word;
+    -moz-tab-size: 4;
+    tab-size: 4;
+
+    // --vh: 100%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 /* table border 문제로 인해 별도 설정 */
@@ -105,7 +52,6 @@ td {
     padding: 0;
     font: inherit;
     vertical-align: baseline;
-    font-family: 'Noto Sans KR', sans-serif;
     box-sizing: border-box;
 }
 /* // table border 문제로 인해 별도 설정 */
@@ -113,7 +59,7 @@ pre {
     white-space: pre-wrap;
 }
 html {
-    font-size: 62.5%;
+    font-size: var.$root-font-size; // 10px
 
     // @include respond-to(small-phone) {
     //     font-size: 62.5%;
@@ -126,19 +72,13 @@ html {
     // }
 }
 body {
+    font-family: var.$font-family, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: var.$color-black;
+    font-weight: 400;
 }
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-input,
-textarea,
-select {
-    font-family: 'Noto Sans KR', sans-serif;
-}
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -177,20 +117,16 @@ table {
     border-spacing: 0;
 }
 a {
-    color: inherit;
     text-decoration: none;
-    display: block;
-    width: 100%;
-    height: 100%;
 }
 button {
-    width: 100%;
     border: none;
     background-color: transparent;
     cursor: pointer;
     padding: 0;
-    text-align: left;
-    font: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 input,
@@ -208,10 +144,10 @@ textarea {
     margin: 0;
     padding: 0;
     vertical-align: middle;
-    box-sizing: border-box;
     border-radius: 0;
     background-color: rgba(255, 255, 255, 1);
     -webkit-background-color: rgba(255, 255, 255, 1);
+    resize: none;
 
     &::placeholder {
         color: #a0a0a0;
@@ -228,4 +164,32 @@ textarea {
         opacity: 1;
         -webkit-opacity: 1;
     }
+}
+
+/* 포커스 스타일 (접근성 강화) */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid #000;
+    outline-offset: 2px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-text-fill-color: #000;
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+    box-shadow: 0 0 0px 1000px #fff inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+input:autofill,
+input:autofill:hover,
+input:autofill:focus,
+input:autofill:active {
+    -webkit-text-fill-color: #000;
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+    box-shadow: 0 0 0px 1000px #fff inset;
+    transition: background-color 5000s ease-in-out 0s;
 }

@@ -1,0 +1,248 @@
+@use 'base/reset';
+@use 'abstracts/mixins' as mix;
+@use 'abstracts/variables' as var;
+@use 'abstracts/functions' as func;
+
+.ui {
+    padding-top: 7rem;
+    &__nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+        padding: 2rem 3rem;
+        display: flex;
+        gap: 1rem;
+        background: #eee;
+        border-bottom: 1px solid #d3d2d2;
+        padding-right: 25rem;
+        a {
+            display: inline-block;
+            text-align: center;
+            line-height: 2.5rem;
+            font-size: 1.2rem;
+            background: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 0 1rem;
+            text-transform: uppercase;
+            &:hover {
+                color: #fff;
+                background: var.$color-primary-20;
+            }
+        }
+    }
+    &__page {
+        position: relative;
+        padding: 3rem 2rem;
+        &::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: calc(100% - 4rem);
+            height: 0.1rem;
+            background: var.$color-gray-40;
+        }
+        &--title {
+            margin-bottom: 2.5rem;
+            width: 40rem;
+            font-size: 3.2rem;
+            font-weight: 800;
+        }
+        &--cont {
+            padding: 2rem;
+            .text-box {
+                padding: 3rem 2rem;
+                background: var.$color-gray-20;
+                font-size: 1.6rem;
+            }
+            .fonts {
+                &__list {
+                    padding: 3rem 0;
+                    font-size: 3rem;
+                    p + p {
+                        margin-top: 2rem;
+                    }
+                    &--thin {
+                        font-weight: 100;
+                    }
+                    &--extraLight {
+                        font-weight: 200;
+                    }
+                    &--light {
+                        font-weight: 300;
+                    }
+                    &--regular {
+                        font-weight: 400;
+                    }
+                    &--medium {
+                        font-weight: 500;
+                    }
+                    &--semiBold {
+                        font-weight: 600;
+                    }
+                    &--bold {
+                        font-weight: 700;
+                    }
+                    &--extraBold {
+                        font-weight: 800;
+                    }
+                    &--black {
+                        font-weight: 900;
+                    }
+                }
+            }
+            .colors {
+                &__title {
+                    margin-bottom: 2.5rem;
+                    font-size: 2.4rem;
+                    font-weight: 600;
+                    color: var.$color-black;
+                    &.gray {
+                        margin-top: 3rem;
+                    }
+                }
+                &__list {
+                    display: flex;
+                    gap: 0.5rem;
+                }
+                &__card {
+                    position: relative;
+                    width: 27rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    border: 0.1rem solid var.$color-gray-30;
+                    border-radius: 2rem;
+                    overflow: hidden;
+                    p {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        height: 10rem;
+                        color: var.$color-white;
+                        font-size: 3.8rem;
+                        font-weight: 600;
+                        &.primary-10 {
+                            background: var.$color-primary-10;
+                        }
+                        &.primary-20 {
+                            background: var.$color-primary-20;
+                        }
+                        &.primary-30 {
+                            background: var.$color-primary-30;
+                        }
+                        &.primary-40 {
+                            background: var.$color-primary-40;
+                        }
+                        &.primary-50 {
+                            background: var.$color-primary-50;
+                        }
+                    }
+                    .hex {
+                        display: flex;
+                        justify-content: space-between;
+                        width: 100%;
+                        color: var.$color-gray-70;
+                        background: var.$color-white;
+                        padding: 2rem;
+                    }
+                }
+                .gray__scale {
+                    display: flex;
+                    li {
+                        width: 10rem;
+                        height: 10rem;
+                    }
+                    &--10 {
+                        background: var.$color-gray-10;
+                    }
+                    &--20 {
+                        background: var.$color-gray-20;
+                    }
+                    &--30 {
+                        background: var.$color-gray-30;
+                    }
+                    &--40 {
+                        background: var.$color-gray-40;
+                    }
+                    &--50 {
+                        background: var.$color-gray-50;
+                    }
+                    &--60 {
+                        background: var.$color-gray-60;
+                    }
+                    &--70 {
+                        background: var.$color-gray-70;
+                    }
+                    &--80 {
+                        background: var.$color-gray-80;
+                    }
+                    &--90 {
+                        background: var.$color-gray-90;
+                    }
+                    &--100 {
+                        background: var.$color-gray-100;
+                    }
+                }
+            }
+            .buttons {
+                .btns {
+                    margin-top: 1rem;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    // btn - color
+                    &.colorW {
+                        color: var.$color-white;
+                    }
+                    // btn - border
+                    &.border {
+                        border: 0.1rem solid var.$color-gray-40;
+                    }
+                    // btn - Size
+                    &.sizeL {
+                        padding: 0 4rem;
+                        height: 6.4rem;
+                        line-height: 6.2rem;
+                    }
+                    &.sizeM {
+                        padding: 0 2.4rem;
+                        height: 4rem;
+                        line-height: 3.8rem;
+                    }
+                    &.sizeS {
+                        padding: 0 2.4rem;
+                        height: 3.5rem;
+                        line-height: 3.3rem;
+                    }
+                    // btn - radius
+                    &.radiusL {
+                        border-radius: 10rem;
+                    }
+                    &.radiusS {
+                        border-radius: 0.8rem;
+                    }
+                    // btn - color
+                    &.bg-primary {
+                        background: var.$color-primary-10;
+                    }
+                    &.bg-red {
+                        background: var.$color-primary-20;
+                    }
+                    &.bg-yellow {
+                        background: var.$color-primary-30;
+                    }
+                    &.bg-blue {
+                        background: var.$color-blue-20;
+                    }
+                }
+            }
+        }
+    }
+}

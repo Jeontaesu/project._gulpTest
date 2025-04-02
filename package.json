@@ -16,6 +16,7 @@
     "repository": "https://github.com/Jeontaesu/project._gulpTest.git",
     "author": "Jeontaesu <jeontaesu@gmail.com>",
     "license": "MIT",
+    "type": "module",
     "scripts": {
         "dev": "gulp dev",
         "build": "gulp build",
@@ -30,6 +31,8 @@
         "gulp-autoprefixer": "^9.0.0",
         "gulp-csso": "^4.0.1",
         "gulp-file-include": "^2.3.0",
+        "gulp-imagemin": "^9.1.0",
+        "gulp-newer": "^1.4.0",
         "gulp-pug": "^5.0.0",
         "gulp-sass": "^6.0.0",
         "prettier": "^3.5.1",

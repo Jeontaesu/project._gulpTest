@@ -1,0 +1,7 @@
+@use 'abstracts/mixins' as mix;
+@use 'abstracts/variables' as var;
+@use 'abstracts/functions' as func;
+
+.a11y-hidden {
+    @include mix.a11y-hidden(true);
+}

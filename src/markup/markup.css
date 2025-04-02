@@ -215,7 +215,7 @@ html {
 }
 
 .state .allEnd {
-  background-color: #00b4d6;
+  background-color: #ef3b3d;
   color: #fff;
   font-weight: 600;
 }
@@ -245,19 +245,19 @@ html {
 }
 
 .urlList .allEnd .end:nth-child(1) .depth_1 {
-  background-color: #1ea31e;
+  background-color: #ef3b3d;
   color: #fff;
 }
 
 .urlList .allEnd .depth_2 {
-  background-color: rgb(134, 253, 153, 0.5);
+  background-color: rgba(150, 234, 255, 0.5);
   ;
 }
 
 .urlList>li {}
 
 .urlList>li+li {
-  border-top: 1px solid #222;
+  border-top: 1px solid #a9a9a9;
 }
 
 li.head {
@@ -302,7 +302,8 @@ li.head>* {
 
 .depth_1 {
   width: 16%;
-  font-weight: 700;
+  font-weight: 600;
+  color: #222;
 }
 
 .depth_2 {

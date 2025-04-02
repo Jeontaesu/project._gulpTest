@@ -1,0 +1,137 @@
+@@include('include/head.html')
+
+<body>
+  <div id="wrap">
+    <div class="guide_ver"></div>
+    <div id="uiWrap" class="ui">
+      <div class="ui__nav">
+        <a href="#color">color</a>
+        <a href="#font">font</a>
+        <a href="#button">button</a>
+        <a href="#icon">icon</a>
+        <a href="#form">form</a>
+        <a href="#tab">tab</a>
+      </div>
+      <div id="color" class="ui__page">
+        <h2 class="ui__page--title">Color</h2>
+        <div class="ui__page--cont">
+          <div class="colors">
+            <h3 class="colors__title">Primary</h3>
+            <ul class="colors__list">
+              <li class="colors__card">
+                <p class="primary-10">Aa</p>
+                <div class="hex">
+                  <span>#d65f5f</span>
+                  <span>214, 95, 95</span>
+                </div>
+              </li>
+              <li class="colors__card">
+                <p class="primary-20">Aa</p>
+                <div class="hex">
+                  <span>#ef3b3d</span>
+                  <span>239, 59, 61</span>
+                </div>
+              </li>
+              <li class="colors__card">
+                <p class="primary-30">Aa</p>
+                <div class="hex">
+                  <span>#ecd26b</span>
+                  <span>236, 210, 107</span>
+                </div>
+              </li>
+              <li class="colors__card">
+                <p class="primary-40">Aa</p>
+                <div class="hex">
+                  <span>#353535</span>
+                  <span>53, 53, 53</span>
+                </div>
+              </li>
+              <li class="colors__card">
+                <p class="primary-50">Aa</p>
+                <div class="hex">
+                  <span>#1d1a1a</span>
+                  <span>29, 26, 26</span>
+                </div>
+              </li>
+            </ul>
+
+            <h3 class="colors__title gray">Gray Scale</h3>
+            <ul class="gray__scale">
+              <li class="gray__scale--10"></li>
+              <li class="gray__scale--20"></li>
+              <li class="gray__scale--30"></li>
+              <li class="gray__scale--40"></li>
+              <li class="gray__scale--50"></li>
+              <li class="gray__scale--60"></li>
+              <li class="gray__scale--70"></li>
+              <li class="gray__scale--80"></li>
+              <li class="gray__scale--90"></li>
+              <li class="gray__scale--100"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="font" class="ui__page">
+        <h2 class="ui__page--title">Font</h2>
+        <div class="ui__page--cont">
+          <div class="fonts">
+            <p class="text-box">Pretendard 폰트를 사용하며, 기본 설정은
+              {font-family:'Pretendard','맑은고딕',sans-serif;font-weight:400;color:#222;}</p>
+            <div class="fonts__list">
+              <p class="fonts__list--thin">100 - Pretendard 프리탠다드</p>
+              <p class="fonts__list--extraLight">200 - Pretendard 프리탠다드</p>
+              <p class="fonts__list--light">300 - Pretendard 프리탠다드</p>
+              <p class="fonts__list--regular">400 - Pretendard 프리탠다드</p>
+              <p class="fonts__list--medium">500 - Pretendard 프리탠다드</p>
+              <p class="fonts__list--semiBold">600 - Pretendard 프리탠다드</p>
+              <p class="fonts__list--bold">700 - Pretendard 프리탠다드</p>
+              <p class="fonts__list--extraBold">800 - Pretendard 프리탠다드</p>
+              <p class="fonts__list--black">900 - Pretendard 프리탠다드</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="button" class="ui__page">
+        <h2 class="ui__page--title">Button</h2>
+        <div class="ui__page--cont">
+          <div class="buttons">
+            <p class="text-box">
+              btn 클래스에 필수 요소의 클래스를 추가하여 활용.
+            </p>
+            <button class="btns border sizeL radiusL" type="button">Button</button>
+            <button class="btns colorW sizeL bg-primary radiusL" type="button">Button</button>
+            <button class="btns colorW sizeM bg-red radiusS" type="button">Button</button>
+            <button class="btns colorW sizeS bg-yellow radiusL" type="button">Button</button>
+            <button class="btns colorW sizeS bg-blue radiusS" type="button">Button</button>
+          </div>
+        </div>
+      </div>
+      <div id="icon" class="ui__page">
+        <h2 class="ui__page--title">Icon</h2>
+        <div class="ui__page--cont"></div>
+      </div>
+      <div id="form" class="ui__page">
+        <h2 class="ui__page--title">Form</h2>
+        <div class="ui__page--cont">
+          <div class="forms">
+            <div class="forms__input">
+              <h3 class="forms__input--tit">Input Text - BOX</h3>
+              <div class="input__wrap">
+                <label class="input__lab" for="username">사용자 이름</label>
+                <div class="input__text">
+                  <input type="text" id="username" name="username" required aria-required="true">
+                  <button class="btn-clear"><span class="a11y-hidden">clear</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="tab" class="ui__page">
+        <h2 class="ui__page--title">Tab</h2>
+        <div class="ui__page--cont"></div>
+      </div>
+    </div>
+
+  </div>
+</body>

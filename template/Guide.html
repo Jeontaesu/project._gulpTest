@@ -140,14 +140,41 @@
         <div class="ui__page--cont">
           <div class="forms">
             <div class="forms__input">
-              <h3 class="forms__input--tit">Input Text - BOX</h3>
+              <h3 class="forms__input__tit">1. Input Text - BasicBox</h3>
               <div class="input__wrap">
-                <label class="input__lab" for="username">사용자 이름</label>
                 <div class="input__text">
-                  <input type="text" id="username" name="username" required aria-required="true">
+                  <input type="text" id="text" name="text" placeholder="input text" required aria-required="true">
                   <button class="btn-clear"><span class="a11y-hidden">clear</span></button>
                 </div>
               </div>
+              <div class="input__wrap">
+                <div class="input__label">
+                  <label class="input__lab" for="username">LABEL</label>
+                </div>
+                <div class="input__text">
+                  <input type="text" id="username" name="username" placeholder="input text" required
+                    aria-required="true">
+                  <button class="btn-clear"><span class="a11y-hidden">clear</span></button>
+                </div>
+                <p class="error-desc">잘못 입력했습니다</p>
+              </div>
+              <div class="input__wrap">
+                <div class="input__text">
+                  <input type="text" id="text" name="text" placeholder="input text" required disabled
+                    aria-required="true">
+                  <button class="btn-clear"><span class="a11y-hidden">clear</span></button>
+                </div>
+                <p class="error-desc">잘못 입력했습니다</p>
+              </div>
+              <!-- input - error -->
+              <div class="input__wrap error">
+                <div class="input__text">
+                  <input type="text" id="text" name="text" placeholder="input text" required aria-required="true">
+                  <button class="btn-clear"><span class="a11y-hidden">clear</span></button>
+                </div>
+                <p class="error-desc">잘못 입력했습니다</p>
+              </div>
+              <!-- //input - error -->
             </div>
           </div>
         </div>

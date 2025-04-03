@@ -1,0 +1,14 @@
+@use 'abstracts/variables' as var;
+@use 'abstracts/functions' as func;
+@use 'abstracts/mixins' as mix;
+
+.icon {
+    display: inline-block;
+    background-size: cover;
+    &-search {
+        width: 2rem;
+        height: 2rem;
+        background-image: func.svgUrl('search');
+        // background-image: func.svgUrl("arrowDown", "green", -90);
+    }
+}

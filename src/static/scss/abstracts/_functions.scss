@@ -1,1 +1,28 @@
-@use './variables' as var;
+@use 'sass:map';
+@use 'abstracts/variables' as var;
+@use 'base/utility' as util;
+
+// SVG Utilities
+@function svgUrl($name, $fill: false, $rotate: false) {
+    $svg: map.get(util.$svgIcons, $name);
+    $transform: '';
+
+    // rotate
+    @if $rotate {
+        $transform: ' transform="rotate(#{$rotate})"';
+        $svg: str-insert($svg, $transform, str-index($svg, '>'));
+    }
+
+    // change colour
+    @if $fill {
+        // encode hash if present (https://stackoverflow.com/a/30733736/2494302)
+        @if str-slice(#{$fill}, 1, 1) == '#' {
+            $fill: '%23#{str-slice(#{$fill}, 2)}';
+        }
+
+        $fill: ' fill="#{$fill}"';
+        $svg: str-insert($svg, $fill, str-index($svg, '>'));
+    }
+
+    @return url('data:image/svg+xml;utf8,#{$svg}');
+}

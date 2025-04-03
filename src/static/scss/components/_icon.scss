@@ -5,9 +5,10 @@
 .icon {
     display: inline-block;
     background-size: cover;
+    background-repeat: no-repeat;
     &-search {
-        width: 2rem;
-        height: 2rem;
+        width: 2.5rem;
+        height: 2.5rem;
         background-image: func.svgUrl('search');
         // background-image: func.svgUrl("arrowDown", "green", -90);
     }

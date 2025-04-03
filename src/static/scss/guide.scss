@@ -346,9 +346,12 @@
                         input {
                             padding-right: 6rem;
                         }
+                        .btn-clear {
+                            right: 6rem;
+                        }
                         .btn-search {
                             position: absolute;
-                            right: 4rem;
+                            right: 2rem;
                             top: 50%;
                             transform: translateY(-50%);
                         }

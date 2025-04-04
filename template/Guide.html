@@ -171,22 +171,109 @@
               </div>
               <!-- //input - error -->
             </div>
-          </div>
-          <div class="forms__input">
-            <h3 class="forms__input__tit">2. Input Text - SEARCH</h3>
-            <div class="input__wrap">
-              <div class="input__text typeSearch">
-                <input type="text" id="text" name="text" placeholder="input text" required aria-required="true">
-                <button class="btn-clear"><span class="a11y-hidden">clear</span></button>
-                <button class="btn-search"><i class="icon icon-search"></i></button>
+
+            <div class="forms__input">
+              <h3 class="forms__input__tit">2. Input Text - SEARCH</h3>
+              <div class="input__wrap">
+                <div class="input__text typeSearch">
+                  <input type="text" id="text" name="text" placeholder="input text" required aria-required="true">
+                  <button class="btn-clear"><span class="a11y-hidden">clear</span></button>
+                  <button class="btn-search"><i class="icon icon-search"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="forms__input">
+              <h3 class="forms__input__tit">3. Input Text - SEARCH2</h3>
+              <div class="input__wrap">
+                <div class="input__text typeSearch2">
+                  <input type="text" id="text" name="text" placeholder="input text" required aria-required="true">
+                  <button class="btn-clear"><span class="a11y-hidden">clear</span></button>
+                  <button class="btn-search"><i class="icon icon-search"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="forms__input">
+              <h3 class="forms__input__tit">4. Checkbox</h3>
+              <div class="input__wrap">
+                <span class="input__checkBox">
+                  <input type="checkbox" name="input-check1" id="input-check1">
+                  <label for="input-check1">check1</label>
+                </span>
+                <span class="input__checkBox">
+                  <input type="checkbox" name="input-check2" id="input-check2">
+                  <label for="input-check2">check2</label>
+                </span>
+                <span class="input__checkBox">
+                  <input type="checkbox" name="input-check3" id="input-check3" disabled>
+                  <label for="input-check3">check3</label>
+                </span>
+              </div>
+            </div>
+
+            <div class="forms__input">
+              <h3 class="forms__input__tit">5. Radiobox</h3>
+              <div class="input__wrap">
+                <span class="input__radioBox">
+                  <input type="radio" name="input-radio1" id="input-radio1-1">
+                  <label for="input-radio1-1">radio1</label>
+                </span>
+                <span class="input__radioBox">
+                  <input type="radio" name="input-radio1" id="input-radio1-2">
+                  <label for="input-radio1-2">radio2</label>
+                </span>
+                <span class="input__radioBox">
+                  <input type="radio" name="input-radio" id="input-radio1-3" disabled>
+                  <label for="input-radio1-3">radio3</label>
+                </span>
+              </div>
+            </div>
+
+            <div class="forms__input">
+              <h3 class="forms__input__tit">6. Selectbox</h3>
+              <div class="input__wrap">
+                <div class="input__selectBox">
+                  <!-- <label for="selectBox1">select</label> -->
+                  <select name="selectBox1" id="selectBox">
+                    <option value="option1">option1</option>
+                    <option value="option1">option2</option>
+                    <option value="option1">option3</option>
+                    <option value="option1">option4</option>
+                    <option value="option1">option5</option>
+                  </select>
+                </div>
+
+                <div class="input__selectBox">
+                  <!-- <label for="selectBox1">select</label> -->
+                  <select name="selectBox1" id="selectBox">
+                    <option value="option1">option1</option>
+                    <option value="option1">option2</option>
+                    <option value="option1">option3</option>
+                    <option value="option1">option4</option>
+                    <option value="option1">option5</option>
+                  </select>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
       </div>
       <div id="tab" class="ui__page">
         <h2 class="ui__page--title">Tab</h2>
-        <div class="ui__page--cont"></div>
+        <div class="ui__page--cont">
+          <div class="tabs">
+            <ul class="tabs__list">
+              <li class="tabs__btn on">Tab1</li>
+              <li class="tabs__btn">Tab2</li>
+              <li class="tabs__btn">Tab3</li>
+            </ul>
+            <div class="tabs__content show" id="tabContent1">Tab1</div>
+            <div class="tabs__content" id="tabContent2">Tab2</div>
+            <div class="tabs__content" id="tabContent3">Tab3</div>
+          </div>
+        </div>
       </div>
     </div>
 

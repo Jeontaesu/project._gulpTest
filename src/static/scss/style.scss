@@ -5,4 +5,8 @@
 @use 'base/utility';
 
 // component
-@use 'components/icon';
+@use 'components/svg';
+
+@use './lib/Swiper';
+
+@use './guide';

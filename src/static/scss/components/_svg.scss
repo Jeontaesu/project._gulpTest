@@ -13,3 +13,13 @@
         // background-image: func.svgUrl("arrowDown", "green", -90);
     }
 }
+
+.svg {
+    background-size: 100% 100%;
+    &-logo {
+        display: block;
+        width: 224px;
+        height: 40px;
+        background: func.svgLogo('231F20', 'EF3B3D', 'A70E13') no-repeat;
+    }
+}

@@ -2,7 +2,7 @@
 @use 'abstracts/mixins' as mix;
 @use 'abstracts/variables' as var;
 @use 'abstracts/functions' as func;
-@use 'components/icon';
+@use 'components/svg';
 .ui {
     padding-top: 7rem;
     &__nav {

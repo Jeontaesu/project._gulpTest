@@ -1,7 +1,7 @@
-import { resizeFont, debounceResize } from './resize.js';
+// import { resizeFont, debounceResize } from './resize.js';
 
-resizeFont();
-window.addEventListener('resize', debounceResize);
+// resizeFont();
+// window.addEventListener('resize', debounceResize);
 
 const UIhandler = {
     // Input 함수
@@ -18,6 +18,7 @@ const UIhandler = {
             }
         }
     },
+
     // Input ClearButton 함수
     ClearButton(e) {
         if (e.target.matches('.input__wrap .btn-clear')) {
@@ -29,6 +30,7 @@ const UIhandler = {
             }
         }
     },
+
     // Tab 함수
     Tabs(e) {
         const button = e.target;

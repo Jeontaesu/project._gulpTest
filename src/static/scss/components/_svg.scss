@@ -3,23 +3,19 @@
 @use 'abstracts/mixins' as mix;
 
 .icon {
-    display: inline-block;
     background-size: cover;
     background-repeat: no-repeat;
     &-search {
+        display: inline-block;
         width: 2.5rem;
         height: 2.5rem;
         background-image: func.svgUrl('search');
         // background-image: func.svgUrl("arrowDown", "green", -90);
     }
-}
-
-.svg {
-    background-size: 100% 100%;
-    &-logo {
-        display: block;
-        width: 224px;
-        height: 40px;
-        background: func.svgLogo('231F20', 'EF3B3D', 'A70E13') no-repeat;
+    &-menu {
+        display: inline-block;
+        width: 4rem;
+        height: 4rem;
+        background-image: func.svgUrl('hamburger');
     }
 }

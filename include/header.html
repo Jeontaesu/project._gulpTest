@@ -1,12 +1,21 @@
-<header>
-  <h1>
-    <a href="#">logo</a>
+<header id="header" class="header">
+  <h1 class="header__logo">
+    <span class="a11y-hidden">일호재단 로고</span>
+    <a href="/">
+      <img src="../static/img/logo.svg" alt="일호재단">
+    </a>
   </h1>
-  <nav>
-    <ul>
-      <li><a href="">1</a></li>
-      <li><a href="">2</a></li>
-      <li><a href="">3</a></li>
-    </ul>
+  <nav class="gnb">
+    <ul class="gnb__list"></ul>
   </nav>
+  <div class="header__right">
+    <button class="btn-spon">
+      <span>후원하기</span>
+      <i></i>
+    </button>
+    <button class="btn-menu">
+      <span class="a11y-hidden">햄버거메뉴</span>
+      <i class="icon-menu"></i>
+    </button>
+  </div>
 </header>

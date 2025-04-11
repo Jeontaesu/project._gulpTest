@@ -1,0 +1,53 @@
+// Grid System Variables
+$grid-desktop-max-width: 1200px;
+$grid-desktop-columns: 12;
+$grid-desktop-gutter: 24px;
+$grid-desktop-margin: 40px;
+
+$grid-tablet-breakpoint: 820px;
+$grid-mobile-breakpoint: 414px;
+
+// Container
+.container {
+    width: 100%;
+    max-width: $grid-desktop-max-width;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $grid-desktop-margin;
+    padding-right: $grid-desktop-margin;
+}
+
+// Row
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -($grid-desktop-gutter / 2);
+    margin-right: -($grid-desktop-gutter / 2);
+}
+
+// Columns
+.col {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+    padding-left: $grid-desktop-gutter / 2;
+    padding-right: $grid-desktop-gutter / 2;
+}
+
+// Generate column classes
+@for $i from 1 through $grid-desktop-columns {
+    .col-#{$i} {
+        $width: percentage($i / $grid-desktop-columns);
+        flex: 0 0 $width;
+        max-width: $width;
+    }
+}
+
+// Responsive breakpoints
+@media (max-width: $grid-tablet-breakpoint) {
+    // Tablet styles...
+}
+
+@media (max-width: $grid-mobile-breakpoint) {
+    // Mobile styles...
+}

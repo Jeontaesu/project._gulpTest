@@ -157,18 +157,73 @@ const UIhandler = {
             });
     },
 
+    // GNB 함수
+    GNB() {
+        fetch('/static/data/menu.json')
+            .then((response) => response.json())
+            .then((menuItems) => {
+                const gnb = document.querySelector('.gnb__list');
+                if (!gnb) return;
+
+                menuItems.forEach((item) => {
+                    const li = document.createElement('li');
+                    li.classList.add('gnb__item');
+
+                    const a = document.createElement('a');
+                    a.href = item.href;
+                    a.textContent = item.title;
+                    a.classList.add('gnb__link');
+
+                    li.appendChild(a);
+
+                    // 2depth가 있으면 추가
+                    if (item.sub && item.sub.length > 0) {
+                        const subUl = document.createElement('ul');
+                        subUl.classList.add('gnb__sub');
+
+                        item.sub.forEach((subItem) => {
+                            const subLi = document.createElement('li');
+                            subLi.classList.add('gnb__sub-item');
+
+                            const subA = document.createElement('a');
+                            subA.href = subItem.href;
+                            subA.textContent = subItem.title;
+                            subA.classList.add('gnb__sub-link');
+
+                            subLi.appendChild(subA);
+                            subUl.appendChild(subLi);
+                        });
+
+                        li.appendChild(subUl);
+                    }
+
+                    gnb.appendChild(li);
+                });
+            })
+            .catch((error) => {
+                console.error(
+                    'GNB 메뉴 데이터를 불러오는 데 실패했습니다:',
+                    error,
+                );
+            });
+    },
+
     // 이벤트 바인딩 함수
     bindEvents() {
         document.addEventListener('keyup', this.Input);
         document.addEventListener('click', this.ClearButton);
         document.addEventListener('click', this.Tabs);
+
         this.CustomSelect();
     },
 
     init() {
         this.bindEvents();
+        this.GNB();
     },
 };
 
 // 이벤트 리스너 초기화
-UIhandler.init();
+document.addEventListener('DOMContentLoaded', () => {
+    UIhandler.init();
+});

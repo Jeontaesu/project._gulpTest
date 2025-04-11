@@ -5,8 +5,12 @@
 @use 'base/utility';
 
 // component
-@use 'components/svg';
+@use 'components/icon';
 
 @use './lib/Swiper';
 
-@use './guide';
+// @use './guide';
+
+//layout
+@use 'layouts/header';
+@use 'layouts/footer';

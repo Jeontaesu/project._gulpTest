@@ -1,0 +1,38 @@
+[
+    {
+        "title": "일호재단",
+        "href": "/",
+        "sub": [
+            { "title": "재단소개", "href": "" },
+            { "title": "이사장 인사말", "href": "/" },
+            { "title": "이사장 인사말", "href": "/" },
+            { "title": "함께하는 사람들", "href": "/" },
+            { "title": "연혁", "href": "/" },
+            { "title": "CI소개", "href": "/" },
+            { "title": "정관", "href": "/" },
+            { "title": "오시는길", "href": "/" },
+            { "title": "운영공시(목록)", "href": "/" }
+        ]
+    },
+    {
+        "title": "사업소개",
+        "href": "",
+        "sub": [
+            { "title": "치료지원", "href": "" },
+            { "title": "재활지원", "href": "" },
+            { "title": "연구지원", "href": "" }
+        ]
+    },
+    {
+        "title": "커뮤니티",
+        "href": "",
+        "sub": [
+            { "title": "재단소식", "href": "" },
+            { "title": "공지사항", "href": "" },
+            { "title": "갤러리", "href": "" },
+            { "title": "협력기관", "href": "" },
+            { "title": "문의하기", "href": "" },
+            { "title": "후원하기", "href": "" }
+        ]
+    }
+]

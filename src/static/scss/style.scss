@@ -6,7 +6,8 @@
 
 // component
 @use 'components/icon';
-@use 'components/grid';
+@use 'components/input';
+@use 'components/button';
 
 @use './lib/Swiper';
 
@@ -15,3 +16,7 @@
 //layout
 @use 'layouts/header';
 @use 'layouts/footer';
+@use 'layouts/layout';
+
+//pages
+@use 'pages/business.scss';

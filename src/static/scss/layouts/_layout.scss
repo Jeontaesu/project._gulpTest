@@ -2,4 +2,20 @@
 @use 'abstracts/mixins' as mix;
 
 .container {
+    padding: 150px 24px 300px;
+    .common-inner {
+        max-width: var.$lg-width;
+        margin: 0 auto;
+    }
+    .sub__title {
+        font-weight: 700;
+        .sub {
+            font-size: 3rem;
+            color: var.$color-primary-20;
+        }
+        .title {
+            font-size: 5.3rem;
+            color: var.$color-black;
+        }
+    }
 }

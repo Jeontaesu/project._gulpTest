@@ -1,0 +1,148 @@
+@use 'abstracts/variables' as var;
+@use 'abstracts/mixins' as mix;
+
+.form {
+    &__top {
+        margin: 5rem 0;
+        .desc {
+            font-size: 1.6rem;
+        }
+        .input__wrap {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+    &__wrap {
+        &__title {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+    }
+
+    &__section {
+        display: grid;
+        grid-template-columns: 180px 1fr;
+        min-height: 7rem;
+        border-top: 1px solid var.$color-gray-75;
+        .form__title {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 1rem 3rem;
+            background: var.$color-gray-20;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+        .form__cont {
+            padding: 2rem 3rem;
+            .input__text {
+                width: 35rem;
+                input {
+                    height: 3rem;
+                }
+            }
+            .address {
+                display: flex;
+                flex-direction: column;
+                font-size: 1.4rem;
+                .post {
+                    color: var.$color-blue-30;
+                }
+            }
+            &.select-custom {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                > div {
+                    flex: 1;
+                }
+                .input__text {
+                    width: 100%;
+                }
+                .selected-option {
+                    height: 3rem;
+                }
+            }
+            .flex {
+                gap: 3rem;
+                .input__wrap {
+                    display: flex;
+                    align-items: center;
+                    .input-name {
+                        flex-basis: 10rem;
+                        flex-shrink: 0;
+                        width: 10rem;
+                    }
+                }
+            }
+        }
+        .input__radio__wrap {
+            &.flex {
+                gap: 0;
+            }
+        }
+
+        &.custom {
+            .form__cont {
+                padding: 2rem 0 2rem 3rem;
+                .input__wrap {
+                    width: 50%;
+                    flex-basis: 50%;
+                }
+            }
+            .input-top {
+                gap: 0;
+            }
+            .input-center {
+                em {
+                    display: block;
+                    margin-top: 1.6rem;
+                    font-size: 1.3rem;
+                }
+                .input__radio__wrap {
+                }
+            }
+            .input-btm {
+            }
+        }
+    }
+    &__section__wrap {
+        display: flex;
+        .form__section {
+            flex-basis: 50%;
+            width: 50%;
+            .date-input-container {
+                position: relative;
+                display: flex;
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .date-input {
+                width: 90%;
+                padding: 8px 10px;
+                border: 1px solid #ccc;
+                border-radius: 2px;
+                font-size: 14px;
+            }
+
+            .date-input:focus {
+                border-color: #999;
+            }
+
+            .calendar-icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 2.4rem;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
+}

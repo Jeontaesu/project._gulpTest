@@ -21,7 +21,7 @@ const UIhandler = {
 
     // Input ClearButton 함수
     ClearButton(e) {
-        if (e.target.matches('.input__wrap .btn-clear')) {
+        if (e.target.matches('.btn-clear')) {
             const parent = e.target.closest('.input__text');
 
             if (parent) {

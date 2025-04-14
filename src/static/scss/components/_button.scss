@@ -1,0 +1,67 @@
+@use 'abstracts/variables' as var;
+@use 'abstracts/mixins' as mix;
+
+.btn {
+    margin-top: 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    //btn - search
+    &-search {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.5rem 6rem;
+        color: var.$color-white;
+        height: 3rem;
+    }
+
+    // btn - color
+    &.colorW {
+        color: var.$color-white;
+    }
+    // btn - border
+    &.border {
+        border: 0.1rem solid var.$color-gray-40;
+    }
+    // btn - Size
+    &.sizeL {
+        padding: 0 4rem;
+        height: 6.4rem;
+        line-height: 6.2rem;
+    }
+    &.sizeM {
+        padding: 0 2.4rem;
+        height: 4rem;
+        line-height: 3.8rem;
+    }
+    &.sizeS {
+        padding: 0 2.4rem;
+        height: 3.5rem;
+        line-height: 3.3rem;
+    }
+    // btn - radius
+    &-radiusL {
+        @include mix.border-radius(10rem);
+    }
+    &-radiusS {
+        @include mix.border-radius(0.8rem);
+    }
+    // btn - color
+    &-bg-primary {
+        background: var.$color-primary-10;
+    }
+    &-bg-red {
+        background: var.$color-primary-20;
+    }
+    &-bg-yellow {
+        background: var.$color-primary-30;
+    }
+    &-bg-blue {
+        background: var.$color-blue-20;
+    }
+    &-bg-gray {
+        background: var.$color-gray-80;
+    }
+}

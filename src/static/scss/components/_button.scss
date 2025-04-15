@@ -17,6 +17,22 @@
         height: 3rem;
     }
 
+    //btn-download
+    &-download {
+        display: inline-flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 0 3.5rem;
+        line-height: 4rem;
+        background-color: var.$color-gray-50;
+        font-size: 1.4rem;
+        @include mix.border-radius(0.8rem);
+        svg {
+            width: 1.3rem;
+            height: 1.5rem;
+        }
+    }
+
     // btn - color
     &.colorW {
         color: var.$color-white;
@@ -62,6 +78,6 @@
         background: var.$color-blue-20;
     }
     &-bg-gray {
-        background: var.$color-gray-80;
+        background: var.$color-gray-70;
     }
 }

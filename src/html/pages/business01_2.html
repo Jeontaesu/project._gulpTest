@@ -144,7 +144,7 @@
                 </div>
               </div>
             </div>
-            <div class="form__section">
+            <div class="form__section support">
               <div class="form__title">지원사업 종류</div>
               <div class="form__cont">
                 <div class="flex">
@@ -186,7 +186,7 @@
                 </div>
               </div>
             </div>
-            <div class="form__section custom">
+            <div class="form__section system">
               <div class="form__title">사회지지체계</div>
               <div class="form__cont">
                 <div class="flex input-top">
@@ -238,7 +238,7 @@
                   </div>
                 </div>
                 <div class="flex input-center">
-                  <div class="input__wrap flex-none">
+                  <div class="input__wrap flex-none left">
                     <div class="flex">
                       <div class="input-name">본인부담경감<br />대상구분</div>
                       <div class="input__radio__wrap">
@@ -258,7 +258,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="input__wrap">
+                  <div class="input__wrap right">
                     <div class="input-name">보건소</div>
                     <div class="input__radio__wrap">
                       <span class="input__radioBox">
@@ -273,7 +273,7 @@
                   </div>
                 </div>
                 <div class="flex input-btm">
-                  <div class="input__wrap">
+                  <div class="input__wrap left">
                     <div class="input-name">타 후원단체</div>
                     <div class="input__radio__wrap">
                       <span class="input__radioBox">
@@ -286,33 +286,31 @@
                       </span>
                     </div>
                   </div>
-                  <div class="input__wrap">
-                    <div class="input__wrap-left">
-                      <div class="input-name">사보험</div>
-
+                  <div class="input__wrap right">
+                    <div class="input-name">사보험</div>
+                    <div class="flex">
                       <div class="input__label">
                         <label class="input__lab" for="name">진단금</label>
                       </div>
                       <div class="input__text">
                         <input type="text" id="name" name="name" placeholder="500,000" required aria-required="true">
-                        <button class="btn-clear"><span class="a11y-hidden">clear</span></button>
+                        <!-- <button class="btn-clear"><span class="a11y-hidden">clear</span></button> -->
                         원
                       </div>
-
                     </div>
-                    <div class="input__wrap-right">
-                      <div class="input__wrap">
-                        <div class="input-name">실비</div>
-                        <span class="input__radioBox">
-                          <input type="radio" name="input-radio9" id="input-radio9-1">
-                          <label for="input-radio9-1">있음</label>
-                        </span>
-                        <span class="input__radioBox">
-                          <input type="radio" name="input-radio9" id="input-radio9-2">
-                          <label for="input-radio9-2">없음</label>
-                        </span>
-                      </div>
-                    </div>
+                  </div>
+                </div>
+                <div class="flex">
+                  <div class="input__wrap">
+                    <div class="input-name">실비</div>
+                    <span class="input__radioBox">
+                      <input type="radio" name="input-radio9" id="input-radio9-1">
+                      <label for="input-radio9-1">있음</label>
+                    </span>
+                    <span class="input__radioBox">
+                      <input type="radio" name="input-radio9" id="input-radio9-2">
+                      <label for="input-radio9-2">없음</label>
+                    </span>
                   </div>
                 </div>
               </div>
@@ -321,26 +319,28 @@
               <div class="form__title">환아특징<br /><span>(성격 및 취미, 장래희망
                   치료의지 등) </span></div>
               <div class="form__cont">
-                <textarea name="" id=""></textarea>
-                <span class="text-limit">3000자 미만</span>
+                <div class="input__textareaBox">
+                  <textarea class="text-area" name="" id="" placeholder="※ 필수로 꼭 작성해주세요 ※"></textarea>
+                  <span class="text-limit">3000자 미만</span>
+                </div>
               </div>
             </div>
-            <div class="form__section">
+            <div class="form__section income">
               <div class="form__title">재산/소득 현황</div>
-              <div class="form__cont">
-                <div class="input__wrap">
+              <div class="form__cont flex">
+                <div class="input__wrap flex">
                   <div class="input-name">직전 6개월 기준 소득 평균 금액</div>
                   <div class="input__text">
                     <input type="text" id="name" name="name" placeholder="2,000,000" required aria-required="true">
-                    <button class="btn-clear"><span class="a11y-hidden">clear</span></button>
+                    <!-- <button class="btn-clear"><span class="a11y-hidden">clear</span></button> -->
                     원
                   </div>
                 </div>
-                <div class="input__wrap">
+                <div class="input__wrap flex">
                   <div class="input-name">직전 6개월 건보료 납입 평균 금액</div>
                   <div class="input__text">
                     <input type="text" id="name" name="name" placeholder="200,000" required aria-required="true">
-                    <button class="btn-clear"><span class="a11y-hidden">clear</span></button>
+                    <!-- <button class="btn-clear"><span class="a11y-hidden">clear</span></button> -->
                     원
                   </div>
                 </div>
@@ -350,6 +350,15 @@
               <div class="form__title">가족사항</div>
               <div class="form__cont">
                 <table>
+                  <colgroup>
+                    <col style="width:15rem;">
+                    <col style="width:10rem;">
+                    <col style="">
+                    <col>
+                    <col style="width:10rem;">
+                    <col>
+                    <col>
+                  </colgroup>
                   <thead>
                     <tr>
                       <th>성명</th>
@@ -363,46 +372,82 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td>홍길동</td>
-                      <td>부</td>
-                      <td>공무원</td>
-                      <td>300만원</td>
-                      <td>선택 ▼</td>
-                      <td>수면장애</td>
-                      <td>심근경색</td>
+                      <td><input type="text" value="홍길동"></td>
+                      <td><input type="text" value="부"></td>
+                      <td><input type="text" value="공무원"></td>
+                      <td><input type="text" value="300만원"></td>
+                      <td>
+                        <div class="input__selectBox">
+                          <!-- <label for="selectBox1">선택</label> -->
+                          <select name="selectBox1" id="selectBox">
+                            <option value="option1">선택</option>
+                            <option value="option1">동거</option>
+                            <option value="option1">비동거</option>
+                          </select>
+                        </div>
+                      </td>
+                      <td><input type="text" value="수면장애"></td>
+                      <td><input type="text" value="심근경색"></td>
                     </tr>
                     <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td>선택 ▼</td>
-                      <td></td>
-                      <td></td>
+                      <td><input type="text"></td>
+                      <td><input type="text"></td>
+                      <td><input type="text"></td>
+                      <td><input type="text"></td>
+                      <td>
+                        <div class="input__selectBox">
+                          <!-- <label for="selectBox1">선택</label> -->
+                          <select name="selectBox1" id="selectBox">
+                            <option value="option1">선택</option>
+                            <option value="option1">동거</option>
+                            <option value="option1">비동거</option>
+                          </select>
+                        </div>
+                      </td>
+                      <td><input type="text"></td>
+                      <td><input type="text"></td>
                     </tr>
                     <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td>선택 ▼</td>
-                      <td></td>
-                      <td></td>
+                      <td><input type="text"></td>
+                      <td><input type="text"></td>
+                      <td><input type="text"></td>
+                      <td><input type="text"></td>
+                      <td>
+                        <div class="input__selectBox">
+                          <!-- <label for="selectBox1">선택</label> -->
+                          <select name="selectBox1" id="selectBox">
+                            <option value="option1">선택</option>
+                            <option value="option1">동거</option>
+                            <option value="option1">비동거</option>
+                          </select>
+                        </div>
+                      </td>
+                      <td><input type="text"></td>
+                      <td><input type="text"></td>
                     </tr>
                     <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td>선택 ▼</td>
-                      <td></td>
-                      <td></td>
+                      <td><input type="text"></td>
+                      <td><input type="text"></td>
+                      <td><input type="text"></td>
+                      <td><input type="text"></td>
+                      <td>
+                        <div class="input__selectBox">
+                          <!-- <label for="selectBox1">선택</label> -->
+                          <select name="selectBox1" id="selectBox">
+                            <option value="option1">선택</option>
+                            <option value="option1">동거</option>
+                            <option value="option1">비동거</option>
+                          </select>
+                        </div>
+                      </td>
+                      <td><input type="text"></td>
+                      <td><input type="text"></td>
                     </tr>
                   </tbody>
                 </table>
-                <div class="table__button">
-                  <button class="btn-add">+</button>
-                  <button class="btn-remove">-</button>
+                <div class="btn-container">
+                  <button class="add-btn">+</button>
+                  <button class="remove-btn">-</button>
                 </div>
               </div>
             </div>
@@ -411,13 +456,16 @@
                 환아사진 첨부
               </div>
               <div class="form__cont">
-                <div class="form__upload">
-                  <input type="text" class="file-input" placeholder="홍길동 증명사진.jpg" readonly>
-                  <button class="btn-upload">파일 선택</button>
-                </div>
-                <div class="form__upload-info">
-                  <p class="emphasis">*파일첨부는 이미지 파일( JPG, JPEG, GIF, PNG, BMP)만 가능하며, 최대 첨부 가능 용량은 5MB입니다.</p>
-                  <p class="emphasis">*대상자의 사진은 외부 공개되지 않으며, 심사 시 참고사항 입니다.</p>
+                <div class="input__fileBox">
+                  <div class="file__input">
+                    <input type="text" id="filename" placeholder="홍길동 증명사진.jpg" readonly>
+                    <label for="real-file" class="file-button">파일 선택</label>
+                    <input type="file" id="real-file" accept=".jpg,.jpeg,.gif,.png,.bmp" hidden>
+                  </div>
+                  <div class="file__guide">
+                    <p>*파일첨부는 이미지 파일(JPG, JPEG, GIF, PNG, BMP)만 가능하며, 최대 첨부 가능 용량은 5MB입니다.</p>
+                    <p>*대상자의 사진은 외부 공개되지 않으며, 심사 시 참고사항 입니다.</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -426,33 +474,32 @@
                 구비서류 첨부
               </div>
               <div class="form__cont">
-                <div class="form__upload">
-                  <input type="text" class="file-input" placeholder="서류.pdf" readonly>
-                  <button class="btn-upload">파일 선택</button>
-                </div>
-                <div class="form__upload-info">
-                  <div class="upload-info">
-                    <p class="info">[구비서류]</p>
-                    <ul>
+                <div class="input__fileBox">
+                  <div class="file__input">
+                    <input type="text" id="filename" placeholder="홍길동 증명사진.jpg" readonly>
+                    <label for="real-file" class="file-button">파일 선택</label>
+                    <input type="file" id="real-file" accept=".jpg,.jpeg,.gif,.png,.bmp" hidden>
+                  </div>
+                  <div class="file__guide">
+                    <p class="info"><strong>[구비서류]</strong></p>
+                    <ol>
                       <li>1. 치료비 지원신청서(기관양식)</li>
                       <li>2. 혈액종양전문의 추천서(병원양식) 또는 치료병원 진단서(소견서)</li>
                       <li>3. 진료비 납입확인서(진단~현재)</li>
                       <li>4. 재산: 지방세세목별 과세증명서(전국포함, 재산세 및 자동차세 포함), 등기부등본 / 해당자 限: 부채증명서, 전월임대차계약서/자동차보험증권 사본</li>
                       <li>5. 소득: 건강보험료 납부확인서(최근 6개월) 또는 전년도 근로소득 원천징수 영수증(부/모 모두) 중 택1</li>
                       <li>6. 기타: 소득없음 사실 증명원, 어린이보험증권 사본, 수급자 증명서 사본은 해당자에 한해 제출</li>
-                    </ul>
-                  </div>
-                  <div class="upload-info">
-                    <p class="info">※ 제출시 유의사항 ※</p>
-                    <ul>
-                      <li><strong>1. 서류 제출시, 주민등록번호 뒷자리는 보호처리 후 제출하시기 바랍니다.</strong></li>
-                      <li><strong>2. 첨부서류들을 PDF파일로 변환하여 1개 파일로 업로드 바랍니다.</strong></li>
+                    </ol>
+                    <p class="info mt-20"><strong>※ 제출시 유의사항 ※</strong></p>
+                    <ol>
+                      <li><strong class="under-line">1. 서류 제출시, 주민등록번호 뒷자리는 보호처리 후 제출하시기 바랍니다.</strong></li>
+                      <li><strong class="under-line">2. 첨부서류들을 PDF파일로 변환하여 1개 파일로 업로드 바랍니다.</strong></li>
                       <li><em>3.</em> 구비서류 또는 기재내용이 허위로 판명될 경우 지원이 불가능합니다.</li>
                       <li><em>4.</em> 서류는 신청일 1개월 이내의 원본만 인정하며, 소득관련서류는 환아를 포함한 주민등록상 만 19세 이상 가구원은 모두 제출해야 합니다.</li>
                       <li><em>5.</em> 가족 전체가 수급자 및 차상위일 경우, 수급자 증명서(생계/의료/주거/교육) 또는 차상위계층 증명서 제출바랍니다.</li>
                       <li><em>6.</em> 필요 시 환아 보호자와의 유선 또는 대면 면담이 진행될 수 있습니다.</li>
                       <li><em>7 .</em> 파일첨부는 PDF파일만 가능하며, 최대 첨부 가능 용량은 5MB입니다.</li>
-                    </ul>
+                    </ol>
                   </div>
                 </div>
               </div>
@@ -462,14 +509,17 @@
                 개인정보이용<br />동의서 작성 및 첨부
               </div>
               <div class="form__cont">
-                <div class="form__upload">
-                  <input type="text" class="file-input" placeholder="개인정보이용동의서_홍길동.xls" readonly>
-                  <button class="btn-upload">파일 선택</button>
+                <div class="input__fileBox">
+                  <div class="file__input">
+                    <input type="text" id="filename" placeholder="홍길동 증명사진.jpg" readonly>
+                    <label for="real-file" class="file-button">파일 선택</label>
+                    <input type="file" id="real-file" accept=".jpg,.jpeg,.gif,.png,.bmp" hidden>
+                  </div>
+                  <div class="file__guide">
+                    <p>*최대 첨부 가능 용량은 1000KB입니다.</p>
+                  </div>
                 </div>
-                <div class="form__upload-info">
-                  <p class="emphasis">*최대 첨부 가능 용량은 1000KB입니다.</p>
-                </div>
-                <button class="btn-download">
+                <button class="btn-download mt-10">
                   <svg class="clip-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path
                       d="M16.5,6V17.5A4,4,0,0,1,8.5,17.5V5A2.5,2.5,0,0,1,13.5,5V15.5a1,1,0,0,1-2,0V6H10V15.5a2.5,2.5,0,0,0,5,0V5A4,4,0,0,0,7,5V17.5a5.5,5.5,0,0,0,11,0V6Z" />
@@ -483,7 +533,10 @@
                 가족 및 경제적 사항
               </div>
               <div class="form__cont">
-                <textarea name="" id=""></textarea>
+                <div class="input__textareaBox">
+                  <textarea class="text-area" name="" id="" placeholder=""></textarea>
+                  <span class="text-limit">3000자 미만</span>
+                </div>
               </div>
             </div>
             <div class="form__section">
@@ -491,9 +544,11 @@
                 의료적 사항
               </div>
               <div class="form__cont">
-                <textarea name="" id="" placeholder="*상세하게 적어주세요.&#13;&#10;
-                (과거 질병과 관련된 검사 및 수술 병력, 현재 병명, 앞으로 받아야 할 수술 및 치료에 관련된 내용&#13;&#10;
-                이 때, 향후 받아야할 수술 및 치료에 대한 예상 비용 상세기제 부탁드립니다.)"></textarea>
+                <div class="input__textareaBox">
+                  <textarea class="text-area" name="" id=""
+                    placeholder="*상세하게 적어주세요.&#13;&#10;(과거 질병과 관련된 검사 및 수술 병력, 현재 병명, 앞으로 받아야 할 수술 및 치료에 관련된 내용&#13;&#10;이 때, 향후 받아야할 수술 및 치료에 대한 예상 비용 상세기제 부탁드립니다.)"></textarea>
+                  <span class="text-limit">3000자 미만</span>
+                </div>
               </div>
             </div>
             <div class="form__section">
@@ -502,10 +557,26 @@
                 필요헌 이유
               </div>
               <div class="form__cont">
-                <textarea name="" id=""></textarea>
+                <div class="input__textareaBox">
+                  <textarea class="text-area" name="" id="" placeholder=""></textarea>
+                  <span class="text-limit">3000자 미만</span>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+        <div class="form__btn-list">
+          <button class="btn sizeM btn-bg-gray btn-return" type="button">다시 입력</button>
+          <ul class="flex">
+            <li>
+              <button class="btn sizeM btn-bg-gray btn-cancle" type="button">취소</button>
+            </li>
+            <li>
+              <button class="btn sizeM btn-bg-primary btn-complete" type="button">신청완료</button>
+            </li>
+          </ul>
+        </div>
+      </div>
     </main>
     @@include('include/footer.html')
   </div>

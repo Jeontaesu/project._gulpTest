@@ -1,8 +1,9 @@
 $root-font-size: 10px;
 
 //임시
-$full-width: 1920px;
-$lg-width: 1200px;
+$full-width: 192rem;
+$lg-width: 120rem;
+$sm-width: 58rem;
 
 // font
 $font-family: 'Pretendard', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
@@ -40,14 +41,16 @@ $color-blue-70: #1d47b2;
 $color-gray-10: #f5f6f6;
 $color-gray-20: #eaeaea;
 $color-gray-30: #e0e0e0;
-$color-gray-40: #f0f0f0;
+$color-gray-35: #f0f0f0;
+$color-gray-40: #babfce;
 $color-gray-50: #bdbdbd;
 $color-gray-60: #8f8f8f;
 $color-gray-70: #757575;
 $color-gray-75: #999999;
 $color-gray-80: #515151;
-$color-gray-85: #353535;
-$color-gray-90: #1d1a1a;
+$color-gray-85: #464646;
+$color-gray-90: #353535;
+$color-gray-95: #1d1a1a;
 $color-gray-100: #050404;
 
 // SVG icons

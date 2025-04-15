@@ -4,11 +4,18 @@
 #wrap {
     width: 100%;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    main {
+        flex: 1;
+    }
 }
 .container {
-    padding: 15rem 0 30rem;
-    .common-inner {
-        width: var.$lg-width;
+    padding: 15rem 0 15rem;
+    .section-inner {
+        max-width: var.$lg-width;
+        padding: 0 1rem;
         margin: 0 auto;
     }
     .sub__title {

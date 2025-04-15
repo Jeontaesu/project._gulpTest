@@ -1,7 +1,7 @@
-// import { resizeFont, debounceResize } from "./resize.js";
+import { resizeFont, debounceResize } from './resize.js';
 
-// resizeFont();
-// window.addEventListener("resize", debounceResize);
+resizeFont();
+window.addEventListener('resize', debounceResize);
 
 const UIhandler = {
     // Input 함수

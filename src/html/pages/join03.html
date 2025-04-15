@@ -1,0 +1,105 @@
+@@include('include/head.html')
+
+<body>
+  <div id="wrap">
+    @@include('include/header.html')
+    <main>
+      <div class="container">
+        <section class="sc-form form__join">
+          <div class="section-inner">
+            <div class="sub__title text-center">
+              <h2 class="title">회원가입</h2>
+            </div>
+            <form action="" style="margin-top:6.4rem">
+              <div class="form__joinBox">
+                <ul class="step__list mb-35">
+                  <li class="on active">
+                    <em>1</em>
+                    <p>약관동의</p>
+                  </li>
+                  <li class="on active">
+                    <em>2</em>
+                    <p>본인인증</p>
+                  </li>
+                  <li class="on">
+                    <em>3</em>
+                    <p>정보입력</p>
+                  </li>
+                  <li>
+                    <em>4</em>
+                    <p>가입완료</p>
+                  </li>
+                </ul>
+
+                <div class="input__container">
+                  <div class="input__wrap">
+                    <div class="input__label">
+                      <label class="input__lab" for="username">이름</label>
+                    </div>
+                    <div class="input__text ty2">
+                      <input type="text" id="username" name="username" placeholder="이름을 입력해주세요" required
+                        aria-required="true">
+                      <button class="btn-clear"><span class="a11y-hidden">clear</span></button>
+                    </div>
+                  </div>
+                  <div class="input__wrap">
+                    <div class="input__label">
+                      <label class="input__lab" for="username">생년월일</label>
+                    </div>
+                    <div class="input__text ty2">
+                      <input type="text" id="username" name="username" placeholder="생년월일 6자리를 입력해주세요" required
+                        aria-required="true">
+                      <button class="btn-clear"><span class="a11y-hidden">clear</span></button>
+                    </div>
+                  </div>
+                  <div class="input__wrap">
+                    <div class="input__label">
+                      <label class="input__lab" for="username">아이디</label>
+                    </div>
+                    <ul class="input__text ty3">
+                      <li>
+                        <input type="text" id="username" name="username" placeholder="아이디를 입력해주세요" required
+                          aria-required="true">
+                      </li>
+                      <li>
+                        <button class="btn border-ty2 mt-0" type-="button">중복확인</button>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="input__wrap">
+                    <div class="input__label">
+                      <label class="input__lab" for="username">비밀번호</label>
+                    </div>
+                    <div class="input__text ty2">
+                      <input type="password" id="username" name="username" placeholder="" required aria-required="true">
+                      <button class="btn-clear"><span class="a11y-hidden">clear</span></button>
+                    </div>
+                  </div>
+                  <div class="input__wrap">
+                    <div class="input__label">
+                      <label class="input__lab" for="username">비밀번호 확인</label>
+                    </div>
+                    <div class="input__text ty2">
+                      <input type="password" id="username" name="username" placeholder="" required aria-required="true">
+                      <button class="btn-clear"><span class="a11y-hidden">clear</span></button>
+                    </div>
+                  </div>
+                </div>
+
+                <ul class="form__btn-list mt-80">
+                  <li>
+                    <button class="btn btn-bg-gray" type="button">취소하기</button>
+                  </li>
+                  <li>
+                    <button class="btn btn-bg-black colorW" type="button">다음단계</button>
+                  </li>
+                </ul>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </main>
+    @@include('include/footer.html')
+  </div>
+</body>

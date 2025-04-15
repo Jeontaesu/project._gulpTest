@@ -57,6 +57,11 @@ td {
 pre {
     white-space: pre-wrap;
 }
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
 html {
     font-size: var.$root-font-size; // 10px
 

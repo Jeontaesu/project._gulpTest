@@ -32,6 +32,9 @@ $svgIcons: (
     &-20 {
         margin-top: 2rem !important;
     }
+    &-24 {
+        margin-top: 2.4rem !important;
+    }
     &-30 {
         margin-top: 3rem !important;
     }
@@ -40,6 +43,12 @@ $svgIcons: (
     }
     &-50 {
         margin-top: 5rem !important;
+    }
+    &-70 {
+        margin-top: 7rem !important;
+    }
+    &-80 {
+        margin-top: 8rem !important;
     }
 }
 .mb {
@@ -51,6 +60,9 @@ $svgIcons: (
     }
     &-30 {
         margin-bottom: 3rem !important;
+    }
+    &-35 {
+        margin-bottom: 3.5rem !important;
     }
     &-40 {
         margin-bottom: 4rem !important;

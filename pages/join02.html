@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>project._Test</title>
+  <!-- fonts -->
+  <!-- //fonts -->
+
+  <!-- css -->
+  <link rel="stylesheet" href="../static/css/style.css">
+  <link rel="stylesheet" href="../static/css/guide.css">
+  <!-- //css -->
+
+  <!-- script -->
+  <script src="../static/js/libs/jquery-3.7.1.min.js"></script>
+  <script src="../static/js/libs/gsap.min.js"></script>
+  <script src="../static/js/libs/ScrollTrigger.min.js"></script>
+  <script src="../static/js/libs/ScrollToPlugin.min.js"></script>
+  <script src="../static/js/libs/swiper.min.js"></script>
+  <script type="module" src="../static/js/common.ui.js"></script>
+  <!-- //script -->
+</head>
+
+<body>
+  <div id="wrap">
+    <header id="header" class="header">
+  <h1 class="header__logo">
+    <span class="a11y-hidden">일호재단 로고</span>
+    <a href="/">
+      <img src="../static/img/logo.svg" alt="일호재단">
+    </a>
+  </h1>
+  <nav class="gnb">
+    <ul class="gnb__list"></ul>
+  </nav>
+  <div class="header__right">
+    <button class="btn-spon">
+      <span>후원하기</span>
+      <i></i>
+    </button>
+    <button class="btn-menu">
+      <span class="a11y-hidden">햄버거메뉴</span>
+      <i class="icon-menu"></i>
+    </button>
+  </div>
+</header>
+    <main>
+      <div class="container">
+        <section class="sc-form form__join">
+          <div class="section-inner">
+            <div class="sub__title text-center">
+              <h2 class="title">회원가입</h2>
+            </div>
+            <form action="" style="margin-top:6.4rem">
+              <div class="form__joinBox">
+                <ul class="step__list mb-35">
+                  <li class="on active">
+                    <em>1</em>
+                    <p>약관동의</p>
+                  </li>
+                  <li class="on">
+                    <em>2</em>
+                    <p>본인인증</p>
+                  </li>
+                  <li>
+                    <em>3</em>
+                    <p>정보입력</p>
+                  </li>
+                  <li>
+                    <em>4</em>
+                    <p>가입완료</p>
+                  </li>
+                </ul>
+
+                <div class="input__container">
+                  <div class="input__wrap">
+                    <div class="input__label">
+                      <label class="input__lab" for="username">이름</label>
+                    </div>
+                    <div class="input__text ty2">
+                      <input type="text" id="username" name="username" placeholder="이름을 입력해주세요" required
+                        aria-required="true">
+                      <button class="btn-clear"><span class="a11y-hidden">clear</span></button>
+                    </div>
+                  </div>
+                  <div class="input__wrap">
+                    <div class="input__label">
+                      <label class="input__lab" for="username">생년월일</label>
+                    </div>
+                    <div class="input__text ty2">
+                      <input type="text" id="username" name="username" placeholder="생년월일 6자리를 입력해주세요" required
+                        aria-required="true">
+                      <button class="btn-clear"><span class="a11y-hidden">clear</span></button>
+                    </div>
+                  </div>
+                  <div class="input__wrap">
+                    <div class="input__label">
+                      <label class="input__lab" for="username">연락처</label>
+                    </div>
+                    <ul class="input__text ty3">
+                      <li>
+                        <input type="text" id="username" name="username" placeholder="휴대폰 번호를 입력해주세요" required
+                          aria-required="true">
+
+                      </li>
+                      <li>
+                        <button class="btn border-ty2 mt-0" type-="button">인증번호 발송</button>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="input__wrap">
+                    <div class="input__label">
+                      <label class="input__lab" for="username">인증번호</label>
+                    </div>
+                    <ul class="input__text ty3">
+                      <li>
+                        <input type="text" id="username" name="username" placeholder="휴대폰 번호를 입력해주세요" required
+                          aria-required="true">
+
+                      </li>
+                      <li>
+                        <button class="btn border-ty2 mt-0" type-="button">인증번호 확인</button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <ul class="form__btn-list mt-80">
+                  <li>
+                    <button class="btn btn-bg-gray" type="button">취소하기</button>
+                  </li>
+                  <li>
+                    <button class="btn btn-bg-black colorW" type="button">다음단계</button>
+                  </li>
+                </ul>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer id="footer" class="footer">
+  <div class="footer__logoArea">
+    <h2 class="footer-logo">
+      <img src="../static/img/foot_logo.svg" alt="일호재단">
+    </h2>
+    <p class="copy">
+      Copyright© SUSEOK CULTURAL FOUNDATION. All Rights Reserved.
+    </p>
+  </div>
+  <div class="footer__info">
+    <ul>
+      <li>
+        <span>서울시 동대문구 천호대로 64</span>
+      </li>
+      <li>
+        <span>02-920-8329</span>
+      </li>
+    </ul>
+  </div>
+  <div class="footer__link">
+    <div class="footer__family">
+      <a href="" class="btn-family">
+        Family Site <i class="ico-arrow"></i>
+      </a>
+    </div>
+    <ul>
+      <li><a href="">개인정보보호정책</a></li>
+      <li><a href="">이메일무단수집거부</a></li>
+    </ul>
+  </div>
+</footer>
+  </div>
+</body>

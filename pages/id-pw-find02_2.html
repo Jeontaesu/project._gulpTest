@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>project._Test</title>
+  <!-- fonts -->
+  <!-- //fonts -->
+
+  <!-- css -->
+  <link rel="stylesheet" href="../static/css/style.css">
+  <link rel="stylesheet" href="../static/css/guide.css">
+  <!-- //css -->
+
+  <!-- script -->
+  <script src="../static/js/libs/jquery-3.7.1.min.js"></script>
+  <script src="../static/js/libs/gsap.min.js"></script>
+  <script src="../static/js/libs/ScrollTrigger.min.js"></script>
+  <script src="../static/js/libs/ScrollToPlugin.min.js"></script>
+  <script src="../static/js/libs/swiper.min.js"></script>
+  <script type="module" src="../static/js/common.ui.js"></script>
+  <!-- //script -->
+</head>
+
+<body>
+  <div id="wrap">
+    <header id="header" class="header">
+  <h1 class="header__logo">
+    <span class="a11y-hidden">일호재단 로고</span>
+    <a href="/">
+      <img src="../static/img/logo.svg" alt="일호재단">
+    </a>
+  </h1>
+  <nav class="gnb">
+    <ul class="gnb__list"></ul>
+  </nav>
+  <div class="header__right">
+    <button class="btn-spon">
+      <span>후원하기</span>
+      <i></i>
+    </button>
+    <button class="btn-menu">
+      <span class="a11y-hidden">햄버거메뉴</span>
+      <i class="icon-menu"></i>
+    </button>
+  </div>
+</header>
+    <main>
+      <div class="container">
+        <section class="sc-form form__find">
+          <div class="section-inner">
+            <div class="sub__title text-center">
+              <h2 class="title">아이디·비밀번호 찾기</h2>
+            </div>
+
+            <div class="form__findBox mt-80">
+              <div class="tabs ty2">
+                <ul class="tabs__list">
+                  <li class="tabs__btn">아이디 찾기</li>
+                  <li class="tabs__btn on">비밀번호 찾기</li>
+                </ul>
+                <div class="tabs__content" id="tabContent1">
+                  <!-- s: 아이디 찾기(2.아이디 확인) -->
+                  <form action="">
+                    <ul class="step__list">
+                      <li class="on active">
+                        <em>1</em>
+                        <p>가입정보 확인</p>
+                      </li>
+                      <li class="on">
+                        <em>2</em>
+                        <p>아이디 확인</p>
+                      </li>
+                    </ul>
+                    <div class="complete text-center flex flex-column mt-80">
+                      <h3 class="complete__title">
+                        회원님의 아이디는 아래와 같습니다.
+                      </h3>
+                      <p class="complete__desc">
+                        <em>ID값노출</em><br />
+                        (가입일 : 2000.00.00)
+                      </p>
+                    </div>
+                    <ul class="form__btn-list mt-80">
+                      <li>
+                        <button class="btn btn-bg-gray" type="reset">취소하기</button>
+                      </li>
+                      <li>
+                        <button class="btn btn-bg-black colorW" type="button">다음단계</button>
+                      </li>
+                    </ul>
+                  </form>
+                  <!-- e:// 아이디 찾기(2.아이디 확인) -->
+                </div>
+                <div class="tabs__content show" id="tabContent2">
+                  <form action="">
+                    <ul class="step__list">
+                      <li class="on active">
+                        <em>1</em>
+                        <p>가입정보 확인</p>
+                      </li>
+                      <li class="on">
+                        <em>2</em>
+                        <p>개인정보 입력</p>
+                      </li>
+                      <li class="">
+                        <em>3</em>
+                        <p>비밀번호 재설정</p>
+                      </li>
+                    </ul>
+                    <div class="input__container mt-40">
+                      <div class="input__wrap">
+                        <div class="input__label">
+                          <label class="input__lab" for="username">이름</label>
+                        </div>
+                        <div class="input__text ty2">
+                          <input type="text" id="username" name="username" placeholder="이름을 입력해주세요" required
+                            aria-required="true">
+                          <button class="btn-clear"><span class="a11y-hidden">clear</span></button>
+                        </div>
+                      </div>
+                      <div class="input__wrap">
+                        <div class="input__label">
+                          <label class="input__lab" for="username">연락처</label>
+                        </div>
+                        <ul class="input__text ty3">
+                          <li>
+                            <input type="text" id="username" name="username" placeholder="휴대폰 번호를 입력해주세요" required
+                              aria-required="true">
+
+                          </li>
+                          <li>
+                            <button class="btn border-ty2 mt-0" type-="button">인증번호 발송</button>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="input__wrap">
+                        <div class="input__label">
+                          <label class="input__lab" for="username">인증번호</label>
+                        </div>
+                        <ul class="input__text ty3">
+                          <li>
+                            <input type="text" id="username" name="username" placeholder="전송된 인증번호를 입력해주세요" required
+                              aria-required="true">
+
+                          </li>
+                          <li>
+                            <button class="btn border-ty2 mt-0" type-="button">인증번호 확인</button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="login__wrap">
+                      <button type="submit" class="btn sizeL btn-bg-gray mt-80 colorW">비밀번호 재설정</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer id="footer" class="footer">
+  <div class="footer__logoArea">
+    <h2 class="footer-logo">
+      <img src="../static/img/foot_logo.svg" alt="일호재단">
+    </h2>
+    <p class="copy">
+      Copyright© SUSEOK CULTURAL FOUNDATION. All Rights Reserved.
+    </p>
+  </div>
+  <div class="footer__info">
+    <ul>
+      <li>
+        <span>서울시 동대문구 천호대로 64</span>
+      </li>
+      <li>
+        <span>02-920-8329</span>
+      </li>
+    </ul>
+  </div>
+  <div class="footer__link">
+    <div class="footer__family">
+      <a href="" class="btn-family">
+        Family Site <i class="ico-arrow"></i>
+      </a>
+    </div>
+    <ul>
+      <li><a href="">개인정보보호정책</a></li>
+      <li><a href="">이메일무단수집거부</a></li>
+    </ul>
+  </div>
+</footer>
+  </div>
+</body>

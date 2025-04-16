@@ -26,24 +26,26 @@
 <body>
   <div id="wrap">
     <header id="header" class="header">
-  <h1 class="header__logo">
-    <span class="a11y-hidden">일호재단 로고</span>
-    <a href="/">
-      <img src="../static/img/logo.svg" alt="일호재단">
-    </a>
-  </h1>
-  <nav class="gnb">
-    <ul class="gnb__list"></ul>
-  </nav>
-  <div class="header__right">
-    <button class="btn-spon">
+  <div class="header__inner">
+    <h1 class="header__logo">
+      <span class="a11y-hidden">일호재단 로고</span>
+      <a href="/">
+        <img src="../static/img/logo.svg" alt="일호재단">
+      </a>
+    </h1>
+    <nav class="gnb">
+      <ul class="gnb__list"></ul>
+    </nav>
+    <div class="header__right">
+      <!-- <button class="btn-spon">
       <span>후원하기</span>
       <i></i>
-    </button>
-    <button class="btn-menu">
-      <span class="a11y-hidden">햄버거메뉴</span>
-      <i class="icon-menu"></i>
-    </button>
+    </button> -->
+      <button class="btn-menu">
+        <span class="a11y-hidden">햄버거메뉴</span>
+        <i class="icon-menu"></i>
+      </button>
+    </div>
   </div>
 </header>
     <main>
@@ -64,15 +66,15 @@
                 <div class="tabs__content show" id="tabContent2">
                   <form action="">
                     <ul class="step__list">
-                      <li class="on">
+                      <li class="on active">
                         <em>1</em>
                         <p>가입정보 확인</p>
                       </li>
-                      <li class="">
+                      <li class="on active">
                         <em>2</em>
                         <p>개인정보 입력</p>
                       </li>
-                      <li class="">
+                      <li class="on">
                         <em>3</em>
                         <p>비밀번호 재설정</p>
                       </li>
@@ -112,23 +114,25 @@
       </div>
     </main>
     <footer id="footer" class="footer">
-  <div class="footer__logoArea">
-    <h2 class="footer-logo">
-      <img src="../static/img/foot_logo.svg" alt="일호재단">
-    </h2>
-    <p class="copy">
-      Copyright© SUSEOK CULTURAL FOUNDATION. All Rights Reserved.
-    </p>
-  </div>
-  <div class="footer__info">
-    <ul>
-      <li>
-        <span>서울시 동대문구 천호대로 64</span>
-      </li>
-      <li>
-        <span>02-920-8329</span>
-      </li>
-    </ul>
+  <div class="footer__left">
+    <div class="footer__logoArea">
+      <h2 class="footer-logo">
+        <img src="../static/img/foot_logo.svg" alt="일호재단">
+      </h2>
+      <p class="copy">
+        Copyright© SUSEOK CULTURAL FOUNDATION. All Rights Reserved.
+      </p>
+    </div>
+    <div class="footer__info">
+      <ul>
+        <li>
+          <span>서울시 동대문구 천호대로 64</span>
+        </li>
+        <li>
+          <span>02-920-8329</span>
+        </li>
+      </ul>
+    </div>
   </div>
   <div class="footer__link">
     <div class="footer__family">

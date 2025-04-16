@@ -2,6 +2,9 @@
 @use 'abstracts/mixins' as mix;
 
 .sc-form {
+    form {
+        margin-top: 6.4rem;
+    }
     .section-inner {
         max-width: var.$sm-width;
     }

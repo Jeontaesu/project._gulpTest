@@ -13,10 +13,14 @@
 }
 .container {
     padding: 15rem 0 15rem;
+
     .section-inner {
         max-width: var.$lg-width;
         padding: 0 1rem;
         margin: 0 auto;
+        @include mix.respond-to(phone) {
+            padding: 0 2rem;
+        }
     }
     .sub__title {
         font-weight: 700;

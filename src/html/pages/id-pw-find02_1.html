@@ -1,0 +1,103 @@
+@@include('include/head.html')
+
+<body>
+  <div id="wrap">
+    @@include('include/header.html')
+    <main>
+      <div class="container">
+        <section class="sc-form form__find">
+          <div class="section-inner">
+            <div class="sub__title text-center">
+              <h2 class="title">아이디·비밀번호 찾기</h2>
+            </div>
+
+            <div class="form__findBox mt-80">
+              <div class="tabs ty2">
+                <ul class="tabs__list">
+                  <li class="tabs__btn">아이디 찾기</li>
+                  <li class="tabs__btn on">비밀번호 찾기</li>
+                </ul>
+                <div class="tabs__content" id="tabContent1">
+                  <!-- s: 아이디 찾기 (1.가입정보 확인) -->
+                  <form action="">
+                    <ul class="step__list">
+                      <li class="on">
+                        <em>1</em>
+                        <p>가입정보 확인</p>
+                      </li>
+                      <li class="">
+                        <em>2</em>
+                        <p>아이디 확인</p>
+                      </li>
+                    </ul>
+                    <div class="input__container mt-40">
+                      <div class="input__wrap">
+                        <div class="input__label">
+                          <label class="input__lab" for="username">이름</label>
+                        </div>
+                        <div class="input__text ty2">
+                          <input type="text" id="username" name="username" placeholder="이름을 입력해주세요" required
+                            aria-required="true">
+                          <button class="btn-clear"><span class="a11y-hidden">clear</span></button>
+                        </div>
+                      </div>
+                      <div class="input__wrap">
+                        <div class="input__label">
+                          <label class="input__lab" for="username">연락처</label>
+                        </div>
+                        <div class="input__text ty2">
+                          <input type="number" id="username" name="username" placeholder="휴대폰 번호를 입력해주세요" required
+                            aria-required="true">
+                          <button class="btn-clear"><span class="a11y-hidden">clear</span></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="login__wrap">
+                      <button type="submit" class="btn sizeL btn-bg-gray mt-80 colorW">아이디 찾기</button>
+                    </div>
+                  </form>
+                  <!-- e:// 아이디 찾기 (1.가입정보 확인) -->
+                </div>
+                <div class="tabs__content show" id="tabContent2">
+                  <form action="">
+                    <ul class="step__list">
+                      <li class="on">
+                        <em>1</em>
+                        <p>가입정보 확인</p>
+                      </li>
+                      <li class="">
+                        <em>2</em>
+                        <p>개인정보 입력</p>
+                      </li>
+                      <li class="">
+                        <em>3</em>
+                        <p>비밀번호 재설정</p>
+                      </li>
+                    </ul>
+                    <div class="input__container mt-40">
+                      <div class="input__wrap">
+                        <div class="input__label">
+                          <label class="input__lab" for="username">아이디</label>
+                        </div>
+                        <div class="input__text ty2">
+                          <input type="text" id="username" name="username" placeholder="아이디를 입력해주세요" required
+                            aria-required="true">
+                          <button class="btn-clear"><span class="a11y-hidden">clear</span></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="login__wrap">
+                      <button type="submit" class="btn sizeL btn-bg-gray mt-80 colorW">가입 확인</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+      </div>
+    </main>
+    @@include('include/footer.html')
+  </div>
+</body>

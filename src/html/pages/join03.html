@@ -47,7 +47,7 @@
                       <label class="input__lab" for="username">생년월일</label>
                     </div>
                     <div class="input__text ty2">
-                      <input type="text" id="username" name="username" placeholder="생년월일 6자리를 입력해주세요" required
+                      <input type="number" id="username" name="username" placeholder="생년월일 6자리를 입력해주세요" required
                         aria-required="true">
                       <button class="btn-clear"><span class="a11y-hidden">clear</span></button>
                     </div>
@@ -84,11 +84,52 @@
                       <button class="btn-clear"><span class="a11y-hidden">clear</span></button>
                     </div>
                   </div>
+                  <div class="input__wrap">
+                    <div class="input__label">
+                      <label class="input__lab" for="username">이메일</label>
+                    </div>
+                    <div class="input__text ty2">
+                      <ul class="flex">
+                        <li>
+                          <input type="text" id="username" name="username" placeholder="" required aria-required="true">
+                          <button class="btn-clear"><span class="a11y-hidden">clear</span></button>
+                        </li>
+                        <li class="atmark text-center">
+                          @
+                        </li>
+                        <li>
+                          <input type="text" id="username" name="username" placeholder="" required aria-required="true">
+                          <button class="btn-clear"><span class="a11y-hidden">clear</span></button>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="email__status flex mt-16">
+                      <p class="email__status-txt">광고성 메일 수신 여부 (선택)</p>
+                      <span class="input__radioBox">
+                        <input type="radio" name="input-radio1" id="input-radio1-1">
+                        <label for="input-radio1-1">예</label>
+                      </span>
+                      <span class="input__radioBox">
+                        <input type="radio" name="input-radio1" id="input-radio1-2">
+                        <label for="input-radio1-2">아니오</label>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="input__wrap">
+                    <div class="input__label">
+                      <label class="input__lab" for="username">연락처</label>
+                    </div>
+                    <div class="input__text ty2">
+                      <input type="number" id="username" name="username" placeholder="휴대폰 번호를 입력해주세요" required
+                        aria-required="true">
+                      <button class="btn-clear"><span class="a11y-hidden">clear</span></button>
+                    </div>
+                  </div>
                 </div>
 
                 <ul class="form__btn-list mt-80">
                   <li>
-                    <button class="btn btn-bg-gray" type="button">취소하기</button>
+                    <button class="btn btn-bg-gray" type="reset">취소하기</button>
                   </li>
                   <li>
                     <button class="btn btn-bg-black colorW" type="button">다음단계</button>

@@ -124,6 +124,18 @@
             input {
                 @include mix.border-radius(0);
             }
+            .flex {
+                li {
+                    width: 50%;
+                    flex-basis: auto;
+                    &.atmark {
+                        width: 5%;
+                        flex-basis: auto;
+                        font-size: 2rem;
+                        line-height: 2.8rem;
+                    }
+                }
+            }
         }
         &.ty3 {
             display: flex;
@@ -196,7 +208,7 @@
                 &::before {
                     content: '';
                     top: 0;
-                    width: 2.4rem;
+                    width: 2.5rem;
                     height: 2.4rem;
                     background: url(../img/input_check2.png) left center
                         no-repeat;

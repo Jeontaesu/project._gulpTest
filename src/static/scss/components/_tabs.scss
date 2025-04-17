@@ -52,9 +52,16 @@
                     font-weight: 500;
                     color: var.$color-gray-75;
                     cursor: pointer;
+                    transition: all 0.3s;
                     &.on {
                         color: var.$color-black;
                         border-bottom: 2px solid var.$color-black;
+                    }
+                    @include mix.respond-to(tablet) {
+                        font-size: 1.8rem;
+                    }
+                    @include mix.respond-to(phone) {
+                        font-size: 1.6rem;
                     }
                 }
                 &:before {

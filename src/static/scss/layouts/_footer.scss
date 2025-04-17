@@ -11,9 +11,30 @@
     border-top: 1px solid var.$color-gray-40;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+
+    transition: all 0.3s;
+    @include mix.respond-to(small-desktop) {
+        padding: 2rem 3rem;
+        align-items: flex-end;
+    }
     @include mix.respond-to(tablet) {
         flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    &__left {
+        display: flex;
+        align-items: flex-end;
+        gap: 10rem;
+        transition: all 0.3s;
+        @include mix.respond-to(small-desktop) {
+            gap: 3rem;
+        }
+        @include mix.respond-to(tablet) {
+            width: 100%;
+            justify-content: space-between;
+        }
     }
     &__logoArea {
         .footer-logo {
@@ -23,7 +44,7 @@
             }
         }
         .copy {
-            margin-top: 23px;
+            margin-top: 1rem;
             font-size: 12px;
             color: #858585;
             font-weight: 400;
@@ -31,7 +52,9 @@
         }
     }
     &__info {
-        margin-top: 2rem;
+        @include mix.respond-to(tablet) {
+            text-align: right;
+        }
         li {
             font-size: 16px;
             color: #858585;
@@ -46,9 +69,19 @@
         flex-direction: column;
         align-items: flex-end;
         gap: 16px;
-        ul {
+        transition: all 0.3s;
+        @include mix.respond-to(tablet) {
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .footer__util {
             display: flex;
             align-items: center;
+            @include mix.respond-to(tablet) {
+                flex-direction: column;
+            }
+
             li {
                 font-size: 16px;
                 color: var.$color-gray-75;
@@ -64,14 +97,19 @@
                         margin: 0 12px;
                     }
                 }
+                @include mix.respond-to(tablet) {
+                    &:nth-child(2) {
+                        &::before {
+                            content: '';
+                            display: none;
+                        }
+                    }
+                }
             }
         }
         .footer__family {
-            gap: 24px;
-
             background: #f36161;
             border-radius: 8px;
-            // width: 203px;
             .btn-family {
                 display: flex;
                 align-items: center;

@@ -3,24 +3,28 @@
 // 반응형 해상도 분기
 @mixin respond-to($breakpoint) {
     @if $breakpoint == small-phone {
-        @media (max-width: 350px) {
+        @media (max-width: 359px) {
             @content;
         }
     }
     @if $breakpoint == phone {
-        @media (max-width: 600px) {
+        @media (max-width: 767px) {
             @content;
         }
     } @else if $breakpoint == tablet {
         @media (max-width: 900px) {
             @content;
         }
+    } @else if $breakpoint == max-tablet {
+        @media (max-width: 1023px) {
+            @content;
+        }
     } @else if $breakpoint == small-desktop {
-        @media (max-width: 1150px) {
+        @media (max-width: 1100px) {
             @content;
         }
     } @else if $breakpoint == desktop {
-        @media (max-width: 1350px) {
+        @media (max-width: 1279px) {
             @content;
         }
     } @else if $breakpoint == max-pc {

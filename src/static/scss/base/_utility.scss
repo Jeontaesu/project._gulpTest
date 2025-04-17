@@ -21,6 +21,20 @@ $svgIcons: (
         '<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="7" y="9" width="26" height="2" fill="black"/><rect x="7" y="19" width="26" height="2" fill="black"/><rect x="7" y="29" width="26" height="2" fill="black"/></svg>',
 );
 
+//br
+.pc-br {
+    display: block;
+    @include mix.respond-to(phone) {
+        display: none;
+    }
+}
+.mo-br {
+    display: none;
+    @include mix.respond-to(phone) {
+        display: block;
+    }
+}
+
 //utility_style
 .mt {
     &-0 {

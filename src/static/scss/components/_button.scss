@@ -2,13 +2,24 @@
 @use 'abstracts/mixins' as mix;
 
 .btn {
-    margin-top: 1rem;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100%;
+    font-size: 2.4rem;
+    padding: 0 4rem;
+    height: 6.4rem;
+    transition: all 0.3s;
+    @include mix.respond-to(tablet) {
+        font-size: 1.6rem;
+    }
+    @include mix.respond-to(phone) {
+        height: 5rem;
+        padding: 0;
+    }
+
     //btn - search
     &-search {
         display: inline-flex;
@@ -47,20 +58,13 @@
         border: 0.1rem solid var.$color-black;
     }
     // btn - Size
-    &.sizeL {
-        padding: 0 4rem;
-        height: 6.4rem;
-        line-height: 6.2rem;
-    }
     &.sizeM {
         padding: 0 2.4rem;
         height: 4rem;
-        line-height: 3.8rem;
     }
     &.sizeS {
         padding: 0 2.4rem;
         height: 3.5rem;
-        line-height: 3.3rem;
     }
     // btn - radius
     &-radiusL {

@@ -30,6 +30,13 @@
     }
     &__label {
         margin-bottom: 0.5rem;
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 1.2;
+        transition: all 0.3s;
+        @include mix.respond-to(tablet) {
+            font-size: 1.6rem;
+        }
     }
     &__text {
         position: relative;
@@ -133,6 +140,9 @@
                         flex-basis: auto;
                         font-size: 2rem;
                         line-height: 2.8rem;
+                        @include mix.respond-to(small-phone) {
+                            width: 10%;
+                        }
                     }
                 }
             }
@@ -148,16 +158,29 @@
             li {
                 height: 4.1rem;
                 &:nth-child(1) {
-                    width: 80%;
+                    width: calc(100% - 11rem);
+                    @include mix.respond-to(phone) {
+                        width: calc(100% - 9rem);
+                    }
                 }
                 &:nth-child(2) {
-                    width: 20%;
+                    width: 12rem;
+                    @include mix.respond-to(tablet) {
+                        width: 10rem;
+                    }
+                    @include mix.respond-to(phone) {
+                        width: 8rem;
+                    }
                 }
             }
             .btn {
                 font-size: 1.6rem;
                 width: 100%;
                 height: 100%;
+                padding: 0 1rem;
+                @include mix.respond-to(tablet) {
+                    font-size: 1.4rem;
+                }
             }
         }
     }
@@ -204,15 +227,23 @@
         &.ty2 {
             label {
                 font-size: 1.8rem;
-                line-height: 2.4rem;
+                line-height: 1.3;
+                @include mix.respond-to(tablet) {
+                    font-size: 1.6rem;
+                }
                 &::before {
                     content: '';
                     top: 0;
                     width: 2.5rem;
-                    height: 2.4rem;
+                    height: 2.5rem;
                     background: url(../img/input_check2.png) left center
                         no-repeat;
                     background-position: 0 bottom;
+                    background-size: cover;
+                    @include mix.respond-to(tablet) {
+                        width: 2rem;
+                        height: 2rem;
+                    }
                 }
             }
         }
@@ -221,9 +252,12 @@
         display: inline-flex;
         align-items: center;
         position: relative;
+        margin-right: 3rem;
         min-height: 2.6rem;
         vertical-align: top;
-        margin-right: 3rem;
+        &:last-child {
+            margin-right: 0;
+        }
         input {
             position: absolute;
             left: -100000px;
@@ -330,7 +364,7 @@
                     border: 1px solid #d0d0d0;
                     border-radius: 4px;
                     padding: 1rem;
-                    padding-right: 3rem;
+                    padding-right: 2rem;
                     appearance: none;
                 }
             }

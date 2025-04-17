@@ -20,7 +20,6 @@
     @include mix.respond-to(phone) {
         padding: 6rem 0;
     }
-
     .section-inner {
         max-width: var.$lg-width;
         padding: 0 1rem;

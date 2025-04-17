@@ -33,7 +33,7 @@
     }
     .link__list {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         color: var.$color-gray-85;
         li {
             flex: 1;

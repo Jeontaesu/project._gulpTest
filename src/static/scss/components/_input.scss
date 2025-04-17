@@ -136,12 +136,12 @@
                     width: 50%;
                     flex-basis: auto;
                     &.atmark {
-                        width: 5%;
+                        width: 7%;
                         flex-basis: auto;
                         font-size: 2rem;
                         line-height: 2.8rem;
                         @include mix.respond-to(small-phone) {
-                            width: 10%;
+                            width: 3rem;
                         }
                     }
                 }

@@ -9,10 +9,14 @@
 .sc-printPage {
     width: 210mm;
     min-height: 297mm;
-    // padding: 15mm;
+    position: relative;
     box-sizing: border-box;
     font-size: 14px;
     margin: 0 auto;
+    background: var.$color-white;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    padding: 6rem 2rem 2rem;
     table {
         thead,
         tbody,
@@ -34,7 +38,7 @@
         &__top {
             display: flex;
             &-right {
-                width: 60%;
+                width: 62.7%;
                 table {
                     margin-bottom: -1px;
                 }
@@ -65,7 +69,6 @@
     .photo-cell {
         width: 120px;
         text-align: center;
-        vertical-align: top;
     }
 
     .content {

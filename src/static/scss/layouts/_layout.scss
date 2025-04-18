@@ -14,6 +14,7 @@
 .container {
     padding: 15rem 0;
     transition: all 0.3s;
+
     @include mix.respond-to(tablet) {
         padding: 10rem 0;
     }
